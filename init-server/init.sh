@@ -1,14 +1,18 @@
 #!/bin/sh
 
-## 
+## Pre-install 
 adduser nafis
 adduser nafis wheel 
 apk add doas  
 echo "permit nopass :wheel" > /etc/doas.conf
 
+cat > /etc/apk/repositories << EOF; $(echo)
+http://dl-cdn.alpinelinux.org/alpine/v$(cat /etc/alpine-release | cut -d'.' -f1,2)/main
+http://dl-cdn.alpinelinux.org/alpine/v$(cat /etc/alpine-release | cut -d'.' -f1,2)/community
+EOF
 
 ### 🌿🌿 install 🌿🌿
-apk update
+apk update && apk upgrade 
 apk add git 
 apk add nginx 
 apk add php7 php7-fpm php7-opcache php7-gd php7-mysqli php7-zlib php7-curl
