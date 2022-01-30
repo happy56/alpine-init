@@ -1,3 +1,3 @@
-create user nfs identified by 'bx##32232oPPP]][]][';
-grant all on *.* to nfs;
+create user nfs@localhost identified by 'loloita56';
+grant all on *.* to nfs@localhost;
 FLUSH PRIVILEGES;
