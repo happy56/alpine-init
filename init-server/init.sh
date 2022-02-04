@@ -25,7 +25,8 @@ apk add certbot certbot-nginx
 ### nginx 🐦🐦 
 adduser -D -g 'www' www -h /www
 chown -R www:www /var/lib/nginx
-cp etc/nginx.conf /etc/nginx/nginx.conf
+cp etc/nginx/nginx.conf /etc/nginx/nginx.conf
+cp etc/nginx/site-avilable/cnn.local.conf /etc/nginx/site-avilable/cnn.local.conf
 
 ## 🌲🌲 Mysql / Mariadb 🌻🌻🌻🌻
 /etc/init.d/mariadb setup
@@ -52,4 +53,11 @@ mysql_secure_installation
 # wget https://github.com/vrana/adminer/releases/download/v4.8.1/adminer-4.8.1-mysql-en.php 
 
 
+
+## setup dami sites 
+cp dami-site/cnn.local /www/
+
+
 passwd -l root
+
+
