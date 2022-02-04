@@ -57,7 +57,7 @@ mysql_secure_installation
 
 
 ## setup dami sites 
-cp dami-site/cnn.local /www/
+cp -r dami-site/cnn.local /www/
 
 
 passwd -l root
