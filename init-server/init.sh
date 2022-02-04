@@ -25,8 +25,10 @@ apk add certbot certbot-nginx
 ### nginx 🐦🐦 
 adduser -D -g 'www' www -h /www
 chown -R www:www /var/lib/nginx
+mkdir /etc/nginx/sites
 cp etc/nginx/nginx.conf /etc/nginx/nginx.conf
-cp etc/nginx/site-avilable/cnn.local.conf /etc/nginx/site-avilable/cnn.local.conf
+cp etc/nginx/site-avilable/cnn.local.conf /etc/nginx/sites/
+
 
 ## 🌲🌲 Mysql / Mariadb 🌻🌻🌻🌻
 /etc/init.d/mariadb setup
