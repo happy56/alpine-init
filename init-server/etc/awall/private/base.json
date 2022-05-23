@@ -1,0 +1,24 @@
+{
+    "description": "Base zones and policies",
+  
+    "zone": {
+      "WAN": { "iface": "eth0" },
+      "LAN": { "iface": "eth1" },
+      "VPN": { "iface": "tun+" }
+    },
+  
+    "policy": [
+       { "in": "VPN", "action": "accept" },
+       { "out": "VPN", "action": "accept" },
+       { "in": "LAN", "action": "accept" },
+       { "out": "LAN", "action": "accept" },
+       { "in": "_fw", "action": "accept" },
+       { "in": "_fw", "out":  "WAN" , "action": "accept" },
+       { "in": "WAN", "action": "drop" }
+    ],
+  
+    "snat": [ { "out": "WAN" } ],
+  
+    "clamp-mss": [ { "out": "WAN" } ]
+  
+  }

@@ -1,3 +1,9 @@
+<html>
+<head><title>CNN.local</title></head>
+<body>
 <h1>CNN.local</h1>
 <?php
 phpinfo();
+?>
+</body>
+</html>
