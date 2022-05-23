@@ -15,7 +15,7 @@ EOF
 apk update && apk upgrade 
 apk add git 
 apk add nginx 
-apk add php7 php7-fpm php7-opcache php7-gd php7-mysqli php7-zlib php7-curl php7-session
+apk add php7 php7-fpm php7-opcache php7-gd php7-mysqli php7-zlib php7-curl php7-session php7-json
 apk add mariadb mariadb-common mariadb-client 
 apk add certbot certbot-nginx
 
